@@ -2,8 +2,8 @@ const multer = require('multer');
 
 //résolution de l'extension de fichier
 const MIME_TYPES = {
-  'image/jpg': 'jpg',
-  'image/jpeg': 'jpg',
+  'image/jpg': 'jpeg',
+  'image/jpeg': 'jpeg',
   'image/png': 'png'
 };
 
@@ -16,6 +16,7 @@ const storage = multer.diskStorage({
     //et d'ajouter un timestamp comme nom de fichier pour le rendre le plus unique possible
     filename: (req, file, callback) => {
         const name = file.originalname.split(' ').join('_');
+        console.log(name);
         const extension = MIME_TYPES[file.mimetype];
         callback(null, name + Date.now() + '.' + extension);
     }

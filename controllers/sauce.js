@@ -77,9 +77,12 @@ exports.modifySauce = (req, res, next) => {
 
 //suppression d'une sauce et du fichier image
 exports.deleteSauce = (req, res, next) => {
+  console.log(req.params.id);
   Sauce.findOne({ _id: req.params.id })
     .then(sauce => {
-      const filename = thing.imageUrl.split('/images/')[1];
+      console.log(req.params.id);
+      const filename = sauce.imageUrl.split('/images/')[1];
+      console.log(filename);
       fs.unlink(`images/${filename}`, () => {
         Sauce.deleteOne({ _id: req.params.id })
           .then(() => res.status(200).json({ message: 'Objet supprimé !'}))
