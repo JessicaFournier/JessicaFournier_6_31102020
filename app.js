@@ -1,3 +1,6 @@
+const dotenv = require('dotenv');
+dotenv.config();
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
@@ -9,12 +12,12 @@ const userRoutes = require('./routes/user');
 
 const path = require('path');
 
-
 //Connection à la base de données
 
-mongoose.connect('mongodb+srv://Jessica_Fournier:NETware2412@cluster0.rcbg2.mongodb.net/Piquante?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://' + process.env.DB_USER + ':' + process.env.DB_PASS + '@cluster0.rcbg2.mongodb.net/Piquante?retryWrites=true&w=majority',
   { useNewUrlParser: true,
-    useUnifiedTopology: true })
+    useUnifiedTopology: true,
+    useFindAndModifiy: false })
   .then(() => console.log('Connexion à MongoDB réussie !'))
   .catch(() => console.log('Connexion à MongoDB échouée !'));
 
