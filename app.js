@@ -14,7 +14,7 @@ const path = require('path');
 
 //Connection à la base de données
 
-mongoose.connect('mongodb+srv://' + process.env.DB_USER + ':' + process.env.DB_PASS + '@cluster0.rcbg2.mongodb.net/Piquante?retryWrites=true&w=majority',
+mongoose.connect(process.env.MONGODB_URI,
   { useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModifiy: false })
