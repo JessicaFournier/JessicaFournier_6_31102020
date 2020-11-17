@@ -1,7 +1,5 @@
 # JessicaFournier_6_31102020
 
-Projet en cours de réalisation
-
 Projet 6 de la formation OpenClassRooms "développeur web" : Construisez une API Sécurisée pour une application d'avis gastronomique
 
 Compétences évaluées :
