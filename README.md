@@ -15,5 +15,5 @@ Pour tester l'API et se connecter à la base de données MongoDB
   - créer un fichier .env avec comme variable d'environnement : MONGODB_URI = votre URI de connection
   - lancer nodemon server
 
-
+Lien vers le frontend : https://github.com/OpenClassrooms-Student-Center/dwj-projet6
   
