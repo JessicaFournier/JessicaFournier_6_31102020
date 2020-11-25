@@ -11,7 +11,7 @@ Pour tester l'API et se connecter à la base de données MongoDB
   - créer un cluster sur MongoDB Atlas
   - récupérer l'URI de connection dnas l'onglet Command Line Tools puis dans Connect instructions et Connect your application
   - créer un fichier .env avec comme variable d'environnement : MONGODB_URI = votre URI de connection
-  - lancer nodemon server
+  - lancer nodemon serve
 
 Lien vers le frontend : https://github.com/OpenClassrooms-Student-Center/dwj-projet6
   
